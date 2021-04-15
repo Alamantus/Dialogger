@@ -3,3 +3,6 @@ node_modules/
 *.dl
 *.dlz
 releases/
+*.log
+package-lock.json
+.DS_Store

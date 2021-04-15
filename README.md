@@ -43,7 +43,7 @@ Right click on the grid to select the type of node to create:
 - **Branch** - A switch/case list for previously set variables. Click the `+`
     to add more cases and the `-` to remove (from the bottom).
 - **Set** - Name and set a variable.
-- **Node** - ??? This is identical to Text, so I'm not sure why it's here.
+- **Node** - Does nothing but behaves like Text. Best to just ignore it.
 
 After creating a node, click and drag from the green semicircle of the node to
 another node's red semicircle to connect them. You can change which node an
@@ -51,6 +51,43 @@ arrow is attached to by clicking and dragging the appropriate end of the
 arrow.
 
 Click the X anywhere you see it to delete the attached thing.
+
+Building Releases
+-----------------
+
+You can build executable files for all major operating systems using:
+
+```
+npm run build
+```
+
+The files are output to `releases` when it's done.
+
+You can also install to individual operating systems using the following:
+
+```
+npm run build-win
+npm run build-lin
+npm run build-mac
+```
+
+**NOTE:** This uses pretty old versions of everything, and for some reason `electron-packager@v7.4.0`
+refuses to work with NodeJS versions in the double digits. Use a [Node Version Manager](https://npm.github.io/installation-setup-docs/installing/using-a-node-version-manager.html)
+and use Node v8.x with this project.
+
+**ALSO:**  If you're using MacOS to build Windows releases, reconsider. If you still
+want to do it, you'll need to [install Wine](https://www.davidbaumgold.com/tutorials/wine-mac/)
+and check out [this comment](https://github.com/electron/node-rcedit/issues/51#issuecomment-546234084)
+for how to get the icon editor to work since MacOS Catalina and up don't have 32-bit capability.
+
+### Why are the dependencies so out of date?
+
+Because this project was originally just a fork of the original project to get it working
+in Electron and nothing more. At this point, trying to update all the dependencies
+and get everything working again with the new versions would simply not be worth the effort.
+
+If you feel called to upgrade everything, feel free to fork and send a pull request my way.
+I'll merge it as soon as I can if it works!
 
 The MIT License
 ---------------

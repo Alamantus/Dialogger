@@ -2,7 +2,7 @@
   "name": "dialogger",
   "main": "app.js",
   "description": "A simple cross-platform dialogue graph editor.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "Robbie Antenesse <gamedev@alamantus.com>",
   "contributors": [
     {
@@ -13,7 +13,10 @@
   ],
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager . Dialogger --all"
+    "build": "npm run build-win && npm run build-lin && npm run build-mac",
+    "build-win": "electron-packager . Dialogger --platform=win32 --arch=all --icon=images/dialogger.ico --out=./releases --overwrite --prune",
+    "build-lin": "electron-packager . Dialogger --platform=linux --arch=all --icon=images/dialogger.png --out=./releases --overwrite --prune",
+    "build-mac": "electron-packager . Dialogger --platform=darwin --arch=all --icon=images/dialogger.icns --out=./releases --overwrite --prune"
   },
   "repository": {
     "type": "git",
