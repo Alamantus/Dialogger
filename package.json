@@ -1,8 +1,8 @@
 {
-  "name": "Dialogger",
+  "name": "dialogger",
   "main": "app.js",
   "description": "A simple cross-platform dialogue graph editor.",
-  "version": "0.1.0",
+  "version": "1.1.0",
   "author": "Robbie Antenesse <gamedev@alamantus.com>",
   "contributors": [
     {
