@@ -549,14 +549,14 @@ func.do_save = function()
 
 func.export = function()
 {
-	dialog.showOpenDialog({
+	dialog.showSaveDialog({
 		title: 'Export To',
 		buttonLabel: 'Export',
 		filters: [
 			{ name: 'JSON File', extensions: ['json'] }
 		]
-	}, function (fileNames) {
-	    if (fileNames === undefined)
+	}, function (fileName) {
+	    if (fileName === undefined)
 	    	return;
 	    else
 		{

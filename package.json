@@ -12,7 +12,8 @@
     }
   ],
   "scripts": {
-    "start": "./node_modules/.bin/electron ."
+    "start": "electron .",
+    "build": "electron-packager . Dialogger --all"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,7 @@
     "ui-contextmenu": "~1.11.0"
   },
   "devDependencies": {
+    "electron-packager": "^7.4.0",
     "electron-prebuilt": "~1.2.5"
   }
 }
